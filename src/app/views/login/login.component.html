@@ -1,0 +1,18 @@
+<div class="background">
+  <div class="container">
+
+
+    <h1>LOGIN</h1>
+    <form (ngSubmit)="login()" class="form-container">
+      <label for="username">USUÁRIO:</label>
+      <input  type="text" [(ngModel)]="username" name="username" id="username" placeholder="Digite seu nome de usuário">
+      <label for="password">SENHA:</label>
+      <input id="password" type="password" [(ngModel)]="password" name="password" placeholder="Digite sua senha">
+      <div class="util-container">
+        <a href="">Esqueceu a senha?</a>
+        <a href="">Não tem uma conta? Registre-se!</a>
+      </div>
+      <button type="submit">ENTRAR</button>
+    </form>
+  </div>
+</div>

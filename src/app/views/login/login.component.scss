@@ -30,12 +30,12 @@
 }
 
 h1 {
-  color: white;
+  color: $secondary-color;
   text-align: center;
 }
 
 label {
-  color: white;
+  color: black;
   font-weight: 400;
   font-size: small;
   padding: 25px 0 10px 0;
@@ -48,36 +48,26 @@ label {
 }
 
 a {
-  color: rgb(193, 99, 255);
+  color: $secondary-color;
   padding: 5px 0;
+  font-size: 0.8rem;
 }
 a:hover {
-  color: $secondary-color;
+  color: $focus-color;
 }
 
 input {
   background-color: $input-color;
   border: none;
-  border-radius: 2px;
+  border-radius: 6px;
   padding: 5px;
-  outline: none;
+}
 
+input:focus {
+  outline: black solid 1px;
 }
 
 button {
   width: 200px;
-  padding: 10px;
-  background-color: $secondary-color;
-  color: white;
-  font-weight: 700;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: large;
   margin: 20px 0;
-
-}
-
-button:hover {
-  background: #00813a;
 }

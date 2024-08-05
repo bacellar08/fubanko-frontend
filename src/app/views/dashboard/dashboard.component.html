@@ -1,1 +1,24 @@
-<p>dashboard works!</p>
+<app-header></app-header>
+
+<h1>Início</h1>
+
+<h2>Olá, {{userData.username}}</h2>
+
+<p>Seu saldo é: {{userData.balance}}</p>
+
+<p>Suas últimas transações: </p>
+
+<ul>
+  <li *ngFor="let transaction of userData.transactions">
+      {{transaction.date}}
+      {{transaction.from}}
+      {{transaction.to}}
+      {{transaction.amount}}
+      {{transaction.description}}
+      {{transaction.status}}
+  </li>
+</ul>
+
+
+
+

@@ -15,4 +15,12 @@ export class LoginService {
   login(userData : UserModel) : Observable<any> {
     return this.http.post(this.url, userData);
   }
+
+  storeToken(token: string) : void {
+    return localStorage.setItem('authToken', token);
+  }
+
+  getToken() : string | null {
+    return  localStorage.getItem("authToken");
+  }
 }

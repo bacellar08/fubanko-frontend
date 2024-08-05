@@ -36,6 +36,7 @@ export class LoginComponent {
       .subscribe({
         next: (response) : void  => {
           console.log(response)
+          this.loginService.storeToken(response.token)
           this.router.navigate(["dashboard"])
             .catch(error => console.log(error));
         },

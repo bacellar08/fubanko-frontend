@@ -5,14 +5,23 @@
     <h2 class="greetings">Olá, {{userData.username[0].toUpperCase()+userData.username.substring(1)}}</h2>
   </div>
     <div class="notification_button">
-      <mat-icon matBadge="4" class="notifications_icon" aria-label="Notifications icon">notifications</mat-icon>
+      <mat-icon matBadge="4" class="notifications_icon" aria-hidden="false" aria-label="Notifications icon">notifications</mat-icon>
     </div>
 
 </div>
 
 <div class="dashboard-container">
-  <p>Seu saldo</p>
-    <div class="balance-container">
+
+  <div class="container">
+    <p>Seu Saldo</p>
+    <div class="container">
+      <p>Ver extrato</p>
+      <mat-icon>keyboard_arrow_right</mat-icon>
+
+    </div>
+
+  </div>
+    <div class="balance-container container">
     <span class="balance">
       R${{userData.balance.toFixed(2)}}
     </span>
@@ -22,19 +31,38 @@
 
 
 
+<div class="transactions">
+  <p>Histórico </p>
+  <ul>
+    <li *ngFor="let transaction of userData.transactions">
+      <div class="transaction-container container">
+        <div class="circle">
+          <mat-icon class="phone-icon">phone_iphone</mat-icon>
+        </div>
+        <div class="transaction-info">
+          <span>
+            De: {{transaction.from[0].toUpperCase()+transaction.from.substring(1)}}
+          </span>
+          <span>
+          Para: {{transaction.to[0].toUpperCase()+transaction.to.substring(1)}}
+          </span>
+          <span>
+            Valor: R${{transaction.amount.toFixed(2)}}
+          </span>
+          <span>
+            {{transaction.description}}
+          </span>
+        </div>
+        <div class="transaction-date">
+          {{transaction.dateTime | date:'dd MMM' | uppercase}}
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
 
-<p>Suas últimas transações: </p>
 
-<ul>
-  <li *ngFor="let transaction of userData.transactions">
-      {{transaction.date}}
-      {{transaction.from}}
-      {{transaction.to}}
-      {{transaction.amount}}
-      {{transaction.description}}
-      {{transaction.status}}
-  </li>
-</ul>
+
 
 
 

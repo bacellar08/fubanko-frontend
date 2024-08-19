@@ -2,7 +2,7 @@
 
 export interface TransactionModel {
 
-  date: string,
+  dateTime: Date,
   from: string,
   to: string,
   amount: number,

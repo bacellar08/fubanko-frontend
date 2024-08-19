@@ -3,11 +3,13 @@ import {HeaderComponent} from "../../components/template/header/header.component
 import {DashboardService} from "./dashboard.service";
 import {TransactionModel} from "./transaction.model";
 import {NgForOf} from "@angular/common";
+import { MatIconModule } from "@angular/material/icon";
+import {MatBadge} from "@angular/material/badge";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [HeaderComponent, NgForOf],
+  imports: [HeaderComponent, NgForOf, MatIconModule, MatBadge],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

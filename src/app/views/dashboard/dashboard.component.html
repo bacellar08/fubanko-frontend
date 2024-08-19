@@ -1,10 +1,27 @@
-<app-header></app-header>
 
-<h1>Início</h1>
+<div class="main-container">
+  <div class="user-container">
+    <mat-icon class="user_account" aria-hidden="false" aria-label="User icon">account_circle</mat-icon>
+    <h2 class="greetings">Olá, {{userData.username[0].toUpperCase()+userData.username.substring(1)}}</h2>
+  </div>
+    <div class="notification_button">
+      <mat-icon matBadge="4" class="notifications_icon" aria-label="Notifications icon">notifications</mat-icon>
+    </div>
 
-<h2>Olá, {{userData.username}}</h2>
+</div>
 
-<p>Seu saldo é: {{userData.balance}}</p>
+<div class="dashboard-container">
+  <p>Seu saldo</p>
+    <div class="balance-container">
+    <span class="balance">
+      R${{userData.balance.toFixed(2)}}
+    </span>
+      <mat-icon>visibility</mat-icon>
+    </div>
+</div>
+
+
+
 
 <p>Suas últimas transações: </p>
 

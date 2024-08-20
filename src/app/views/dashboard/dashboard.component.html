@@ -1,1 +1,73 @@
-<p>dashboard works!</p>
+
+<div class="main-container">
+  <div class="user-container">
+    <mat-icon class="user_account" aria-hidden="false" aria-label="User icon">account_circle</mat-icon>
+    <h2 class="greetings">Olá, {{userData.username[0].toUpperCase()+userData.username.substring(1)}}</h2>
+  </div>
+    <div class="notification_button">
+      <mat-icon style="color: #FF7F00" matBadge="4" class="notifications_icon" aria-hidden="false" aria-label="Notifications icon">notifications</mat-icon>
+    </div>
+
+</div>
+
+<div class="dashboard-container">
+
+  <div class="container">
+    <p>Seu Saldo</p>
+    <div class="container">
+      <p>Ver extrato</p>
+      <mat-icon>keyboard_arrow_right</mat-icon>
+
+    </div>
+
+  </div>
+    <div class="balance-container container">
+    <span class="balance">
+      R${{userData.balance.toFixed(2)}}
+    </span>
+      <mat-icon>visibility</mat-icon>
+    </div>
+</div>
+
+<div class="slide-nav">
+  <app-nav-slide></app-nav-slide>
+</div>
+
+
+
+<div class="transactions">
+  <p>Histórico </p>
+  <ul>
+    <li *ngFor="let transaction of userData.transactions">
+      <div class="transaction-container container">
+        <div class="circle">
+          <mat-icon class="phone-icon">swap_horiz</mat-icon>
+        </div>
+        <div class="transaction-info">
+          <span>
+            De: {{transaction.from[0].toUpperCase()+transaction.from.substring(1)}}
+          </span>
+          <span>
+          Para: {{transaction.to[0].toUpperCase()+transaction.to.substring(1)}}
+          </span>
+          <span>
+            Valor: R${{transaction.amount.toFixed(2)}}
+          </span>
+          <span>
+            {{transaction.description}}
+          </span>
+        </div>
+        <div class="transaction-date">
+          {{transaction.dateTime | date:'dd MMM' | uppercase}}
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+

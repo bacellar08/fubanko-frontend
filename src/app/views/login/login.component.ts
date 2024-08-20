@@ -3,6 +3,7 @@ import {LoginService} from "./login.service";
 import {FormsModule} from "@angular/forms";
 import {UserModel} from "./user.model";
 import {Router} from "@angular/router";
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -10,7 +11,7 @@ import {Router} from "@angular/router";
   selector: 'app-login',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule, MatButtonModule
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
@@ -35,6 +36,7 @@ export class LoginComponent {
       .subscribe({
         next: (response) : void  => {
           console.log(response)
+          this.loginService.storeToken(response.token)
           this.router.navigate(["dashboard"])
             .catch(error => console.log(error));
         },

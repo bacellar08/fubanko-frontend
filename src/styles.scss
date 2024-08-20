@@ -1,14 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 
-$bg-color: #0c0b20;
-$primary-color: #262263;
-$secondary-color: #00d660;
-$input-color: #1b173f;
+$bg-color: #dbdbdbdb;
+$primary-color: #002B59;
+$secondary-color: #FF7F00;
+$input-color: white;
+$focus-color: #002285;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+  ul {
+    list-style-type: none;
+    padding: 0; /* Remove o padding padrão */
+    margin: 0;  /* Remove a margem padrão */
+  }
 }
 
 :root {

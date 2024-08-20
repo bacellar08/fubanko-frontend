@@ -5,11 +5,13 @@ import {TransactionModel} from "./transaction.model";
 import {DatePipe, NgForOf, UpperCasePipe} from "@angular/common";
 import { MatIconModule } from "@angular/material/icon";
 import {MatBadge} from "@angular/material/badge";
+import {NavButtonComponent} from "../../components/nav-button/nav-button.component";
+import {NavSlideComponent} from "../../components/template/nav-slide/nav-slide.component";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [HeaderComponent, NgForOf, MatIconModule, MatBadge, DatePipe, UpperCasePipe],
+  imports: [HeaderComponent, NgForOf, MatIconModule, MatBadge, DatePipe, UpperCasePipe, NavButtonComponent, NavSlideComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

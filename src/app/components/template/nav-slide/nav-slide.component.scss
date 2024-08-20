@@ -1,0 +1,9 @@
+@import '../../../../styles';
+
+.nav-slide {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 1rem;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}

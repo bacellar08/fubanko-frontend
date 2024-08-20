@@ -23,6 +23,7 @@
   width: auto;
   font-size: 3rem;
   padding-right: 8px;
+  color: $secondary-color;
 }
 
 .greetings {
@@ -96,3 +97,8 @@
   .transaction-date {
     font-size: 0.9rem;
   }
+
+
+.slide-nav {
+  background-color: $bg-color;
+}

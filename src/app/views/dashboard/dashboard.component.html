@@ -5,7 +5,7 @@
     <h2 class="greetings">Olá, {{userData.username[0].toUpperCase()+userData.username.substring(1)}}</h2>
   </div>
     <div class="notification_button">
-      <mat-icon matBadge="4" class="notifications_icon" aria-hidden="false" aria-label="Notifications icon">notifications</mat-icon>
+      <mat-icon style="color: #FF7F00" matBadge="4" class="notifications_icon" aria-hidden="false" aria-label="Notifications icon">notifications</mat-icon>
     </div>
 
 </div>
@@ -29,6 +29,10 @@
     </div>
 </div>
 
+<div class="slide-nav">
+  <app-nav-slide></app-nav-slide>
+</div>
+
 
 
 <div class="transactions">
@@ -37,7 +41,7 @@
     <li *ngFor="let transaction of userData.transactions">
       <div class="transaction-container container">
         <div class="circle">
-          <mat-icon class="phone-icon">phone_iphone</mat-icon>
+          <mat-icon class="phone-icon">swap_horiz</mat-icon>
         </div>
         <div class="transaction-info">
           <span>

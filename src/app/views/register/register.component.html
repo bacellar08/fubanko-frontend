@@ -1,0 +1,28 @@
+<div class="background">
+  <div class="container">
+
+
+    <img class="fubanko-logo" src="/assets/fubanko_logo-wide.png" alt="Logo fubanko" [ngClass]="{'shake' : showError}">
+    <h1 class="title">Registre-se</h1>
+    <form (ngSubmit)="register()" class="form-container">
+      <label for="firstName">Primeiro Nome:</label>
+      <input type="text" name="firstName" id="firstName" placeholder="Digite seu nome">
+      <label for="lastName">Sobrenome:</label>
+      <input type="text" name="lastName" id="lastName" placeholder="Digite seu nome">
+      <label for="username">Nome de usuário:</label>
+      <input  type="text" [(ngModel)]="username" name="username" id="username" placeholder="Digite seu nome de usuário">
+      <label for="password">Senha:</label>
+      <input id="password" type="password" [(ngModel)]="password" name="password" placeholder="Digite sua senha">
+      <label for="passwordCheck">Repita a senha:</label>
+      <input id="passwordCheck" type="password" [(ngModel)]="passwordCheck" name="passwordCheck" placeholder="Repita a senha" (blur)="checkPassword()">
+      <div class="error" *ngIf="!isPasswordValid">
+        As senhas não coincidem
+      </div>
+      <div class="util-container">
+        <label for="policy">Ao clicar em registrar, você concorda com os nossos <span>termos de uso. </span></label>
+        <input type="checkbox" id="policy" required>
+      </div>
+      <button mat-stroked-button color="success" type="submit">Registrar</button>
+    </form>
+  </div>
+</div>

@@ -11,6 +11,10 @@
   height: 4rem;
 }
 
+.title {
+  font-size: 1.5rem;
+}
+
 .container {
   margin: 0 auto;
   background-color: $primary-color;
@@ -45,9 +49,10 @@ label {
 }
 
 .util-container {
-  display: flex;
-  flex-direction: column;
   margin: 20px 0 20px 0;
+  span {
+    color: $secondary-color;
+  }
 }
 
 a {
@@ -75,5 +80,11 @@ input:focus {
   color: white;
   width: 200px;
   margin: 20px 0;
+}
+
+.error {
+  color: $error-color;
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
 }
 

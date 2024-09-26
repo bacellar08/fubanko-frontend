@@ -2,7 +2,7 @@
   <div class="container">
 
 
-    <img class="fubanko-logo" src="/assets/fubanko_logo-white.png" alt="Logo fubanko">
+    <img class="fubanko-logo" src="/assets/fubanko_logo-wide.png" alt="Logo fubanko">
     <form (ngSubmit)="login()" class="form-container">
       <label for="username">USUÁRIO:</label>
       <input  type="text" [(ngModel)]="username" name="username" id="username" placeholder="Digite seu nome de usuário">
@@ -10,7 +10,7 @@
       <input id="password" type="password" [(ngModel)]="password" name="password" placeholder="Digite sua senha">
       <div class="util-container">
         <a href="">Esqueceu a senha?</a>
-        <a href="">Não tem uma conta? Registre-se!</a>
+        <a href="/register">Não tem uma conta? Registre-se!</a>
       </div>
       <button mat-stroked-button color="success" type="submit">Entrar</button>
     </form>
